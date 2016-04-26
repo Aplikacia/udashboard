@@ -22,7 +22,7 @@ class EditRoleAction(LinkAction):
 
 
 class AvailableRolesTable(DataTable):
-    id = Column('role_id', hidden=True)
+    id = Column('id', hidden=True)
     name = Column('name')
     created = Column('created')
     last_modified = Column('last_modified')
