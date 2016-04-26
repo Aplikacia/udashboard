@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Available Roles" %}{% endblock %}
+
+{% block page_header %}
+  {% include "horizon/common/_page_header.html" with title=_("Available Roles") %}
+{% endblock page_header %}
+
+{% block main %}
+{{table.render}}
+{% endblock %}
+
+

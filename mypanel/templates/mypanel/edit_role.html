@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Available Roles" %}{% endblock %}
+
+{% block page_header %}
+  {% include "horizon/common/_page_header.html" with title=_("Classes") %}
+{% endblock page_header %}
+
+{% block main %}
+<div> <a href="/mydashboard"><</a> Role: {{ role.name }}</div>
+<form action="" method="post">
+    <input type="submit" value="Save" />
+    {% csrf_token %}
+    {% for f in forms %}
+        <div class="form">
+            <h2>{{ f.name }}</h2>
+            {{ f.form.as_ul }}
+        </div>
+    {% endfor %}
+</form>
+{% endblock %}
+
+
